@@ -1,0 +1,26 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/help_form.css' %}">
+    <title>You need help?</title>
+</head>
+
+<body>
+    <div class="title">
+        <p>お問い合わせフォーム</p>
+    </div>
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button type="submit" class="btn" onclick="instruction()">送信確定</button>
+            <script src="{% static 'myapp/alert.js'%}"></script>
+        </form>
+    </div>
+</body>
+
+</html>

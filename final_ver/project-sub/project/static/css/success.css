@@ -1,0 +1,33 @@
+body{
+    background-image: linear-gradient(150deg, rgb(248, 92, 8) 10%,
+    rgb(209, 59, 94) 40%, rgb(142, 62, 199) 68%, rgb(61, 152, 212) 90%);
+}
+
+html{
+    min-height: 100%;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.table{
+    margin: auto;
+    width: fit-content;
+}
+
+p{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+h4{
+    text-align: center;
+}

@@ -1,0 +1,42 @@
+body{
+    background-image: linear-gradient(150deg, rgb(248, 92, 8) 10%,
+    rgb(209, 59, 94) 40%, rgb(142, 62, 199) 68%, rgb(61, 152, 212) 90%);
+}
+
+html{
+    min-height: 100%;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+p{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+
+.btn{
+    max-width: fit-content;
+    margin: auto;
+
+}
+
+.btn button{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10%;
+    border: solid gray;
+    background-color: rgb(196, 115, 243);
+}
+
+h4{
+    text-align: center;
+    margin-top: 100px;
+}

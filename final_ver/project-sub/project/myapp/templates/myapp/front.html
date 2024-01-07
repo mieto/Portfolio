@@ -1,0 +1,43 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/front.css' %}">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Front</title>
+</head>
+
+<body>
+    <h1>フロントページ</h1>
+    <div class="sub">
+        <h2>csvファイルで給料の見込みを計算するwebアプリ</h2>
+        <p>※csvファイルとはcomma separated values の略です。エクセルなどのデータファイルをカンマ区切りで出力したファイルです。<br>
+            前提として、アルバイト等のシフトがエクセルやスプレッドシートで配られることを想定しています。
+        </p>
+    </div>
+
+    <div class="ti">
+        <h3>
+            <プロセス>
+        </h3>
+    </div>
+    <ol class="process">
+        <li>先ずはアップロードページへ<a href="{% url 'upload_file' %}">ここをクリックして</a>移動してみよう</li>
+        <li>ドラッグアンドドロップでも、ボタンクリックでもライブラリを開いてcsvファイルをアップロードすることができます。</li>
+        <li>アップロードボタンを押すと確認画面がでてくるので問題なければ計算するページに飛んでください。</li>
+        <li>最後にあなたの時給を整数で入力して給料の見込みを出して確認してみましょう。</li>
+    </ol>
+    <div class="que">
+        <h4><a href="{% url 'post_help_page' %}">お問い合わせ</a></h4>
+        <p>※「お問い合わせ」は管理者にバグやヘルプ内容を報告することができます。</p>
+    </div>
+    <div class="manage">
+        <h4>管理人さんへ</h4>
+        <p>管理人用サイトは<a href="{% url 'admin:index' %}">こちら</a></p>
+    </div>
+</body>
+
+</html>

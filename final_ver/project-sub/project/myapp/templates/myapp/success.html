@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/success.css' %}">
+    <title>アップロード成功</title>
+</head>
+
+<body>
+    <h1>アップロード成功</h1>
+
+    <h2>アップロードされたCSVファイルの内容:</h2>
+    <div class="table">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time Slot A</th>
+                    <th>Time Slot B</th>
+                    <th>Time Slot C</th>
+                    <th>Time Slot D</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for info in informations %}
+                <tr>
+                    <td>{{ info.date }}</td>
+                    <td>{{ info.time_slot_a }}</td>
+                    <td>{{ info.time_slot_b }}</td>
+                    <td>{{ info.time_slot_c }}</td>
+                    <td>{{ info.time_slot_d }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <p><a href="{% url 'upload_file' %}">続けてアップロード</a></p>
+    <p>問題なければ<a href="{% url 'calculate_page' %}">ここをクリック</a>で計算するページに飛びます</p>
+    <h4><a href="{% url 'post_help_page' %}">お問い合わせ</a></h4>
+    <p>※「お問い合わせ」は管理者にバグやヘルプ内容を報告することができます。</p>
+</body>
+
+</html>

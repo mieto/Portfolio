@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+    <title>Upload</title>
+</head>
+
+<body>
+    <h3>以下の「ファイルを選択」から選択し、uploadボタンを押してください。ドラッグアンドドロップでも可</h3>
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {{form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <div class="link">
+        <p>以前ファイルをアップロードしている場合は重複を避けるため<a href="{% url 'delete_data' %}">ここをクリック</a>してファイルを削除してください。</p>
+        <p>また以前のファイルで計算を再度したい方は<a href="{% url 'calculate_page' %}">ここをクリック</a>して確認しましょう。</p>
+    </div>
+    <div class="que">
+        <h4><a href="{% url 'post_help_page' %}">お問い合わせ</a></h4>
+        <p>※「お問い合わせ」は管理者にバグやヘルプ内容を報告することができます。</p>
+    </div>
+</body>
+
+</html>

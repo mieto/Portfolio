@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/delete.css' %}">
+    <title>Delete</title>
+</head>
+
+<body>
+    <h1>レコードの削除</h1>
+    <p>全てのレコードを削除することができます。削除しますか？</p>
+    <div class="btn">
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" onclick="instruction()">削除する</button>
+            <script src="{% static 'myapp/instruction.js'%}"></script>
+        </form>
+    </div>
+    <h4><a href="{% url 'post_help_page' %}">お問い合わせ</a></h4>
+    <p>※「お問い合わせ」は管理者にバグやヘルプ内容を報告することができます。</p>
+</body>
+
+</html>
