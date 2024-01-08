@@ -13,10 +13,9 @@
 
 ## 目次
 
-1. [プロジェクトについて](#プロジェクトについて)
+1. [給料計算アプリ](#給料計算アプリ)
 2. [環境](#環境)
-3. [ディレクトリ構成](#ディレクトリ構成)
-4. [開発環境構築](#開発環境構築)
+3. [開発環境構築](#開発環境構築)
 
 
 <br />
@@ -28,7 +27,7 @@
 
 
 
-## 給料計算アプリ概要
+### 給料計算アプリ概要
 
 私のバイト先はシフトをエクセルで管理しています。そのため給料を計算するには、既存のアプリを使っても手入力する必要があります。
 <br />
@@ -55,73 +54,6 @@
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
-## ディレクトリ構成
-
-
-
-project
-├── manage.py
-└── myapp
-    ├── admin.py
-    ├── apps.py
-    ├── forms.py
-    ├── migrations
-    │   ├── 0001_initial.py
-    │   ├── 0002_remove_information_employee_name.py
-    │   ├── 0003_help.py
-    │   ├── __init__.py
-    │   └── __pycache__
-    │       ├── 0001_initial.cpython-310.pyc
-    │       ├── 0002_remove_information_employee_name.cpython-310.pyc
-    │       ├── 0003_help.cpython-310.pyc
-    │       └── __init__.cpython-310.pyc
-    ├── models.py
-    ├── templates
-    │   └── myapp
-    │       ├── calculate.html
-    │       ├── delete.html
-    │       ├── front.html
-    │       ├── help_form.html
-    │       ├── success.html
-    │       └── upload.html
-    ├── tests.py
-    ├── views.py
-    ├── __init__.py
-    └── __pycache__
-        ├── admin.cpython-310.pyc
-        ├── apps.cpython-310.pyc
-        ├── forms.cpython-310.pyc
-        ├── models.cpython-310.pyc
-        ├── views.cpython-310.pyc
-        └── __init__.cpython-310.pyc
-├── project
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   ├── __init__.py
-│   └── __pycache__
-│       ├── settings.cpython-310.pyc
-│       ├── urls.cpython-310.pyc
-│       ├── wsgi.cpython-310.pyc
-│       └── __init__.cpython-310.pyc
-├── readme.md
-├── sample.csv
-└── static
-    ├── css
-    │   ├── calculate.css
-    │   ├── delete.css
-    │   ├── front.css
-    │   ├── help_form.css
-    │   ├── success.css
-    │   └── upload.css
-    └── myapp
-        ├── alert.js
-        ├── cookie.js
-        └── instruction.js
-
-
-<p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## 開発環境構築
 
